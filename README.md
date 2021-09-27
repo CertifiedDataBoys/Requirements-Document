@@ -1,9 +1,10 @@
-SRS-IEEE
+Recipe Buddy Software Requirements Specification (SRS) Document
 ========
 
-A Latex template for a Software Requirements Specification that respects the IEEE standards.
+Recipe Buddy Software Requirements Specification (SRS) Document
+[View document](https://github.com/MatthewCS/CS350-requirements-doc/blob/main/srs.pdf)
 
-## Credits
+## IEEE SRS Document Template Credits
 
 - [Yiannis Lazarides](http://tex.stackexchange.com/users/963/yiannis-lazarides) for his answer for a stackexchange's question :
 http://tex.stackexchange.com/questions/42602/software-requirements-specification-with-latex
