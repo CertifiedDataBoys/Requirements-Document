@@ -4,5 +4,6 @@ srs.fdb_latexmk
 srs.fls
 srs.log
 srs.out
+srs.pdf
 srs.synctex.gz
 srs.toc

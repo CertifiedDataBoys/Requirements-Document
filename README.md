@@ -3,7 +3,7 @@ Recipe Buddy Software Requirements Specification (SRS) Document
 
 Recipe Buddy Software Requirements Specification (SRS) Document
 
-[View document](https://github.com/MatthewCS/CS350-requirements-doc/blob/main/srs.pdf)
+[View document](https://github.com/MatthewCS/CS350-requirements-doc/blob/build/srs.pdf)
 
 ## IEEE SRS Document Template Credits
 

@@ -1,4 +1,4 @@
-name: LaTeX Semantic Checker
+name: LaTeX
 
 on:
   push:
@@ -8,10 +8,29 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout repository 🛎️
         uses: actions/checkout@v2
-      - name: LaTeX Semantic Checker (chktex)
+      - name: LaTeX Semantic Checker ⚙️
         uses: j2kun/chktex-action@1.0.3
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v2
+      - name: Compile LaTeX 🏗️
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: srs.tex
+      - name: Upload artifacts 📤
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: srs.pdf
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: build
+          folder: .
