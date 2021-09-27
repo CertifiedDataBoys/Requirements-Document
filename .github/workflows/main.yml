@@ -35,7 +35,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: build
+          publish_branch: build
           publish_dir: .
           exclude_assets: '.gitignore'
           enable_jekyll: false
