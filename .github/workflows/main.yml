@@ -8,13 +8,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  latex:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository 🛎️
         uses: actions/checkout@v2
       - name: LaTeX Semantic Checker ⚙️
         uses: j2kun/chktex-action@1.0.3
+  compile:
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v2
       - name: Compile LaTeX 🏗️
         uses: xu-cheng/latex-action@v2
         with:
