@@ -1,4 +1,4 @@
-name: LaTeX Semantic Checker
+name: LaTeX
 
 on:
   push:
@@ -15,3 +15,14 @@ jobs:
         uses: actions/checkout@v2
       - name: LaTeX Semantic Checker (chktex)
         uses: j2kun/chktex-action@1.0.3
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: srs.tex
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: PDF
+          path: srs.pdf
+
+
