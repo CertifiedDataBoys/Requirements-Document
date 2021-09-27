@@ -1,1 +1,8 @@
 *.code-workspace
+srs.aux
+srs.fdb_latexmk
+srs.fls
+srs.log
+srs.out
+srs.synctex.gz
+srs.toc
