@@ -1,0 +1,17 @@
+name: LaTeX Semantic Checker
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: LaTeX Semantic Checker (chktex)
+        uses: j2kun/chktex-action@1.0.3
