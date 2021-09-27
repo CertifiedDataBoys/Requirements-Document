@@ -10,13 +10,13 @@ on:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: Checkout repository 🛎️
         uses: actions/checkout@v2
       - name: LaTeX Semantic Checker ⚙️
         uses: j2kun/chktex-action@1.0.3
   compile:
-    needs: lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository 🛎️
