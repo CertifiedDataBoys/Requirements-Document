@@ -91,13 +91,13 @@ $ $Lists and sublists should be formatted as such:
 \begin{itemize}
     \item This is an entry on a list!
     \item This is another entry on a list.
-    \begin{itemize}
-        \item This is an entry on a nested list!
-        \item This is another entry on a nested list.
-        \begin{itemize}
-            \item And this is an item on a doubly nested list.
-        \end{itemize}
-    \end{itemize}
+          \begin{itemize}
+              \item This is an entry on a nested list!
+              \item This is another entry on a nested list.
+                    \begin{itemize}
+                        \item And this is an item on a doubly nested list.
+                    \end{itemize}
+          \end{itemize}
 \end{itemize}
 Lists should never be nested more than twice.
 The list in this section shows how far we allow our lists to go.
@@ -111,51 +111,51 @@ Please update this document's version number and update this document's Revision
 When updating this document, adhere to the following style guidelines:
 \begin{itemize}
     \item The first paragraph of each section or subsection does not need to be indented.
-        Subsequent paragraphs should be indented.
-        In LaTeX, that is done by default by typing two blank spaces ``\ \ " after a paragraph.
+          Subsequent paragraphs should be indented.
+          In LaTeX, that is done by default by typing two blank spaces ``\ \ " after a paragraph.
     \item This document should be typed using the default LaTeX font and styling.
     \item When writing numbers within a paragraph:
-    \begin{itemize}
-        \item Whole numbers between zero and fifteen should be typed alphaetically.
-        \item Whole numbers equal to or above 16 should be typed numerically.
-        \item Decimal numbers, such as 3.14, should be typed numerically.
-        \item Fractions should be typed in the form {$\frac{1}{2}$}.
-            In LaTeX, this can be done using the following code:
-            \\ \texttt{ \{\$ \textbackslash frac\{1\}\{2\} \$\} }
-    \end{itemize}
+          \begin{itemize}
+              \item Whole numbers between zero and fifteen should be typed alphaetically.
+              \item Whole numbers equal to or above 16 should be typed numerically.
+              \item Decimal numbers, such as 3.14, should be typed numerically.
+              \item Fractions should be typed in the form {$\frac{1}{2}$}.
+                    In LaTeX, this can be done using the following code:
+                    \\ \texttt{ \{\$ \textbackslash frac\{1\}\{2\} \$\} }
+          \end{itemize}
 \end{itemize}
 
 \subsection{Code}
 When writing code within a paragraph:
 \begin{itemize}
     \item For short snippets, it is okay to use inline code. For example: \\
-        The Python command \texttt{ print( ... ) } writes to standard output. \\
-        In LaTeX, this is done using the \texttt{ \textbackslash texttt\{ \} } command in-line with the rest of a paragraph.
+          The Python command \texttt{ print( ... ) } writes to standard output. \\
+          In LaTeX, this is done using the \texttt{ \textbackslash texttt\{ \} } command in-line with the rest of a paragraph.
     \item For longer snippets, please give the code its own block. For example: \\
-        The following Python function will calculate the area of a circle: \\
-        \texttt{ import math \\
-\\
-// This function takes in the radius of a circle \\
-// and returns the area of that circle. \\
-def area\_circle(radius): \\
-\\
-    r\_squared = radius ** 2 \\
-    return math.pi * r\_squared \\
-        }
+          The following Python function will calculate the area of a circle: \\
+          \texttt{ import math \\
+              \\
+              // This function takes in the radius of a circle \\
+              // and returns the area of that circle. \\
+              def area\_circle(radius): \\
+              \\
+              r\_squared = radius ** 2 \\
+              return math.pi * r\_squared \\
+          }
     \item Please remember that this is a requirements document, and not the system's documentation!
-        Remember to only use code in this document when it is needed!
-        That is,
-        \begin{itemize}
-            \item Write code that clearly illustrates what you are doing.
-            \item Write code that is concise.
-            \item Explain what your code is doing such that a reader with minimal technical skill can understand what the code is doing.
-            \item If the code takes too long to explain, save it for the system's documentation.
-            \item Try not to take up more than half of a page with a block of code.
-            \item Never take up more than an entire page with a block of code.
-            \item Aim to have minimal overlap between the code in this document and the code in our system's documentation.
-            \item The code in this document must convey meaningful information to all readers.
-                It should be useful for developers, as well as non-developers.
-        \end{itemize}
+          Remember to only use code in this document when it is needed!
+          That is,
+          \begin{itemize}
+              \item Write code that clearly illustrates what you are doing.
+              \item Write code that is concise.
+              \item Explain what your code is doing such that a reader with minimal technical skill can understand what the code is doing.
+              \item If the code takes too long to explain, save it for the system's documentation.
+              \item Try not to take up more than half of a page with a block of code.
+              \item Never take up more than an entire page with a block of code.
+              \item Aim to have minimal overlap between the code in this document and the code in our system's documentation.
+              \item The code in this document must convey meaningful information to all readers.
+                    It should be useful for developers, as well as non-developers.
+          \end{itemize}
 \end{itemize}
 $ $
 
@@ -218,36 +218,36 @@ $ $The Recipe Buddy program offers:
     \item A limited publicly-accessible database of Recipes.
     \item User registration to access full features of the website.
     \item The organization of recipies by:
-        \begin{itemize}
-            \item Allowing users to create a recipe.
-            \item Allowing users to modify their recipies.
-            \item Allowing users to delete their recipies.
-            \item Allowing users to set the visibility of their recipies (i.e.\ public or private)
-            \item Allowing users to share private recipies with specific users.
-            \item Allowing users to offer suggestions to other's recipies.
-        \end{itemize}
+          \begin{itemize}
+              \item Allowing users to create a recipe.
+              \item Allowing users to modify their recipies.
+              \item Allowing users to delete their recipies.
+              \item Allowing users to set the visibility of their recipies (i.e.\ public or private)
+              \item Allowing users to share private recipies with specific users.
+              \item Allowing users to offer suggestions to other's recipies.
+          \end{itemize}
     \item The organization of panty items and cookware by:
-        \begin{itemize}
-            \item Allowing for a detailed list of food items available in a users panty.
-            \item Allowing for a user to add all items from a particular recipe into their panty.
-            \item Allowing for users to keep a detailed list of kitchenware that they own.
-            \item Allowing users to edit or modify these lists at any time from the user menu.
-        \end{itemize}
+          \begin{itemize}
+              \item Allowing for a detailed list of food items available in a users panty.
+              \item Allowing for a user to add all items from a particular recipe into their panty.
+              \item Allowing for users to keep a detailed list of kitchenware that they own.
+              \item Allowing users to edit or modify these lists at any time from the user menu.
+          \end{itemize}
     \item The tracking of dietary restrictions by:
-        \begin{itemize}
-            \item Allowing users to keep a detailed list of specific ingredients marked as allergens.
-            \item Allowing users to keep a detailed list of restricted categories. (i.e.\ dairy for lactose intolerant or bread for gluten-free).
-        \end{itemize}
+          \begin{itemize}
+              \item Allowing users to keep a detailed list of specific ingredients marked as allergens.
+              \item Allowing users to keep a detailed list of restricted categories. (i.e.\ dairy for lactose intolerant or bread for gluten-free).
+          \end{itemize}
     \item Powerful search features to sort and filter:
-        \begin{itemize}
-            \item By pantry and cookware items already available to the user.
-            \item By user-specified dietary restrictions.
-            \item By popularity, rating or difficulty.
-        \end{itemize}
+          \begin{itemize}
+              \item By pantry and cookware items already available to the user.
+              \item By user-specified dietary restrictions.
+              \item By popularity, rating or difficulty.
+          \end{itemize}
     \item Social features such as:
-        \begin{itemize}
-            \item Private sharing of a recipe.
-        \end{itemize}
+          \begin{itemize}
+              \item Private sharing of a recipe.
+          \end{itemize}
 \end{itemize}
 $ $
 
