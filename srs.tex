@@ -730,6 +730,39 @@ The Recipe Buddy client software interface runs in a web browser and communicate
     \item REQ-3.1.2: Search entries can be filtered by predetermined dietary restrictions.
 \end{itemize}
 
+\section{Search: Flags}
+
+\subsection{Description and Priority}
+\begin{center}
+    \begin{tabular}{| c | c | c | c |}
+        \hline
+        Critical Level & Medium \\
+        \hline
+        Dependencies & Searching \\
+        \hline
+        Estimated Time & 1 day - 3 days \\
+        \hline
+        Lead Developers & Matthew Sprague, Joseph Morrison, Jeffrey Rescignano \\
+        \hline
+        Testing & Client and focus group frontend testing, unit testing for backend \\
+        \hline
+        Risks & SQL injection, XSS injection \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Stimulus/Response Sequences}
+
+\includegraphics{FlowCharts/Search-Flags.png}
+
+\subsection{Functional Requirements}
+
+\begin{itemize}
+    \item REQ-3.2.1: Prompt user if there are missing ingredients or tools for a recipe.
+    \item REQ-3.2.2: Prompts user if it contains general dietary elements.
+    \item REQ-3.2.3: Prompts user if it contains allergens and dietary restrictions.    
+\end{itemize}
+
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
