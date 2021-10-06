@@ -763,6 +763,38 @@ The Recipe Buddy client software interface runs in a web browser and communicate
     \item REQ-3.2.3: Prompts user if it contains allergens and dietary restrictions.    
 \end{itemize}
 
+\section{Security: Account Creation}
+
+\subsection{Description and Priority}
+\begin{center}
+    \begin{tabular}{| c | c | c | c |}
+        \hline
+        Critical Level & High \\
+        \hline
+        Dependencies & N/A \\
+        \hline
+        Estimated Time & 1 week \\
+        \hline
+        Lead Developers & Matthew Sprague, Jeffrey Rescignano \\
+        \hline
+        Testing & Client and focus group frontend testing, unit testing for backend \\
+        \hline
+        Risks & SQL injection, XSS injection \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Stimulus/Response Sequences}
+
+\includegraphics{FlowCharts/Security-Account-Creation.png}
+
+\subsection{Functional Requirements}
+
+\begin{itemize}
+    \item REQ-4.1.1: Create an account by establishing a username, email, and password to access the site.
+    \item REQ-4.1.2: Email must be verified before an account can be used.    
+\end{itemize}
+
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
