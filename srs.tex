@@ -698,6 +698,38 @@ The Recipe Buddy client software interface runs in a web browser and communicate
     \item REQ-2.3.2: Pantry details are private to the user.
 \end{itemize}
 
+\section{Search: Search}
+
+\subsection{Description and Priority}
+\begin{center}
+    \begin{tabular}{| c | c | c | c |}
+        \hline
+        Critical Level & High \\
+        \hline
+        Dependencies & Recipe Database, Recipe Filter, Recipe Pages \\
+        \hline
+        Estimated Time & 1 week \\
+        \hline
+        Lead Developers & Matthew Sprague, Brian Williams, Joseph Morrison, Jeffrey Rescignano \\
+        \hline
+        Testing & Client and focus group frontend testing, unit testing for backend \\
+        \hline
+        Risks & SQL injection, XSS injection \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Stimulus/Response Sequences}
+
+\includegraphics{FlowCharts/Search-Search.png}
+
+\subsection{Functional Requirements}
+
+\begin{itemize}
+    \item REQ-3.1.1: Insert keywords that get correlated with the ingredients, tools, and recipe names.
+    \item REQ-3.1.2: Search entries can be filtered by predetermined dietary restrictions.
+\end{itemize}
+
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
