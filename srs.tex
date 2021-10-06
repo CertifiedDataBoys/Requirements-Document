@@ -534,6 +534,41 @@ The Recipe Buddy client software interface runs in a web browser and communicate
     \item REQ-5.1: Rate the quality of a recipe. Recipes are rated out of 5 stars, with 1 stars indicating the lowest quality and 5 stars indicating the highest quality.
 \end{itemize}
 
+\section{Recipe: Commenting}
+
+\subsection{Description and Priority}
+\begin{center}
+    \begin{tabular}{| c | c | c | c |}
+        \hline
+        Critical Level & Medium \\
+        \hline
+        Dependencies & Recipe Pages \\
+        \hline
+        Estimated Time & 1 day - 3 days \\
+        \hline
+        Lead Developer & Matthew Sprague, Jeffrey Rescignano \\
+        \hline
+        Testing & Client and focus group frontend testing, unit testing for backend \\
+        \hline
+        Risks & SQL injection, XSS injection \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Stimulus/Response Sequences}
+
+\includegraphics{FlowCharts/Recipe-Commenting.png}
+
+\subsection{Functional Requirements}
+
+\begin{itemize}
+    \item REQ-6.1: Comment on public recipes under a 300 character limit.
+    \item REQ-6.2: Comments can be marked as a suggestion by the user
+        \begin{itemize}
+            \item Prompts the owner of the recipe a notification of the suggestion.
+        \end{itemize}
+\end{itemize}
+
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
