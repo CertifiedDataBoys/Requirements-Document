@@ -133,16 +133,19 @@ When writing code within a paragraph:
           In LaTeX, this is done using the \texttt{ \textbackslash texttt\{ \} } command in-line with the rest of a paragraph.
     \item For longer snippets, please give the code its own block. For example: \\
           The following Python function will calculate the area of a circle: \\
-          \texttt{ import math \\
-              \\
-              // This function takes in the radius of a circle \\
-              // and returns the area of that circle. \\
-              def area\_circle(radius): \\
-              \\
-              r\_squared = radius ** 2 \\
-              return math.pi * r\_squared \\
-          }
-    \item Please remember that this is a requirements document, and not the system's documentation!
+          \begin {verbatim}
+import math
+              
+// This function takes in the radius of a circle
+// and returns the area of that circle.
+def area_circle(radius):
+
+    r_squared = radius ** 2
+    return math.pi * r_squared
+          \end{verbatim}
+          This can be done by using a \texttt{ verbatim } block in LaTeX.  
+
+          Please remember that this is a requirements document, and not the system's documentation!
           Remember to only use code in this document when it is needed!
           That is,
           \begin{itemize}
