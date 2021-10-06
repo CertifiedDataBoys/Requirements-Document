@@ -795,6 +795,37 @@ The Recipe Buddy client software interface runs in a web browser and communicate
     \item REQ-4.1.2: Email must be verified before an account can be used.    
 \end{itemize}
 
+\section{Security: Login}
+
+\subsection{Description and Priority}
+\begin{center}
+    \begin{tabular}{| c | c | c | c |}
+        \hline
+        Critical Level & High \\
+        \hline
+        Dependencies & Account creation \\
+        \hline
+        Estimated Time & 3 days \\
+        \hline
+        Lead Developers & Matthew Sprague, Jeffrey Rescignano \\
+        \hline
+        Testing & Client and focus group frontend testing, unit testing for backend \\
+        \hline
+        Risks & SQL injection, XSS injection, Account Theft \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Stimulus/Response Sequences}
+
+\includegraphics{FlowCharts/Security-Login.png}
+
+\subsection{Functional Requirements}
+
+\begin{itemize}
+    \item REQ-4.2.1: Can access all features of the site with an established account. 
+\end{itemize}
+
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
