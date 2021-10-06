@@ -368,6 +368,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Recipe: Recipe Creation}
 
 \subsection{Description and Priority}
+
+The recipe creation feature allows registered users to upload recipes to the Recipe Buddy recipe database. Various attributes about the recipe such as ingredients, instrctions, videos, images, cook time, cook temperature can be set by the user.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -414,6 +417,8 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 
 \section{Recipe: Recipe Pages}
 
+The recipe pages feature allows both guests and registered users to view recipe information from the Recipe Buddy recipe database. Guests can only view public recipes, while registered users can view public recipes, their own private recipes and other private recipes shared to them by other users.
+
 \subsection{Description and Priority}
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -451,6 +456,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Recipe: Timer}
 
 \subsection{Description and Priority}
+
+The timer feature allows registered users to access a timer on the recipe page that corresponds with the cook time of the recipe. For example, if a particular recipe takes 30 minutes to cook, a timer will appear near that step allowing the user to have easy access to a timer preset to 30 minutes.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -484,6 +492,8 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 
 \section{Recipe: Recipe Difficulty}
 
+The recipe difficulty feature allows recipe creators to set the difficulty of a recipe they are creating.
+
 \subsection{Description and Priority}
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -512,12 +522,20 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \subsection{Functional Requirements}
 
 \begin{itemize}
-    \item REQ-1.4.1: Users have the ability to set the difficulty of the recipes that they create.
+    \item REQ-1.4.1: Users have the ability to set the difficulty of the recipes that they create:
+        \begin{itemize}
+            \item Easy
+            \item Moderate
+            \item Challenging
+        \end{itemize}
 \end{itemize}
 
 \section{Recipe: Recipe Rating}
 
 \subsection{Description and Priority}
+
+The recipe rating feature allows registered users to rate the quality of a recipe on a scale from 1 - 5 stars, where 1 is low quality and 5 is high quality.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -551,6 +569,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Recipe: Commenting}
 
 \subsection{Description and Priority}
+
+The commenting feature allows registered users to leave a comment on a particular recipe up to 300 characters. Users can also mark their comment as a suggestion, where it will notify the recipe creator that a user has suggested a change in their recipe. Recipe comments will be publicly viewable while suggestions are private between the two users.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -588,6 +609,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Recipe: Comment Rating}
 
 \subsection{Description and Priority}
+
+The comment rating feature offers some moderation to comments left by other users. Users can like and dislike comments marking their content as helpful or not helpful.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -621,6 +645,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Profile: Profile}
 
 \subsection{Description and Priority}
+
+The profile feature allows guests and users to view the profile of a particular user. Information shown includes a name, profile picture and favorite recipe. Registered users can view their own profile and make modifications to the profile, pantry, tools and dietary restrictions.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -657,6 +684,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Profile: Pantry}
 
 \subsection{Description and Priority}
+
+The pantry feature allows registered users to keep a detailed list of ingredients they already own in their pantry, cupboard, refrigerator or freezer. Registered users can later use this data in the future to filter and sort by recipes containing ingredients they already own.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -691,6 +721,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Profile: Tools}
 
 \subsection{Description and Priority}
+
+The tools feature allows registered users to keep a detailed list of tools and appliances they own. Registered users can later use this data in the future to filter and sort by recipes containing tools and appliances they already own.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -725,6 +758,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Search: Search}
 
 \subsection{Description and Priority}
+
+The search feature allows guests and registerd users to search for recipes using various attributes such as recipe name, ingredients included, cook time, and rating. Registered users can also sort and filter by their own personalized information such as dietary restrictions, pantry items, or tools and appliances.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -759,6 +795,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Search: Flags}
 
 \subsection{Description and Priority}
+
+The flags feature allows the Recipe Buddy system to notify users of certain attributes of a recipe before the user starts cooking the recipe. For example, if a recipe contains milk, but the user has previously selected that they are lactose intolerant, the Recipe Buddy system will notify them of this before they start cooking the recipe containing milk.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -794,6 +833,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Security: Account Creation}
 
 \subsection{Description and Priority}
+
+The account creation feature allows for guests to enter information in order to create a Recipe Buddy account.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
@@ -828,6 +870,9 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 \section{Security: Login}
 
 \subsection{Description and Priority}
+
+The login feature allows guests to login to their account and access their personalized information in Recipe Buddy.
+
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
         \hline
