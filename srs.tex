@@ -389,7 +389,8 @@ Recipe Buddy shall also abide by the following technical constraints:
             \item Webpage: \href{https://getbootstrap.com/}{getbootstrap.com}
             \item Documentation: \href{https://getbootstrap.com/docs/5.1/getting-started/introduction/}{getbootstrap.com}
             \item Source code: \href{https://github.com/twbs/bootstrap}{github.com}
-    
+            \item Download: \href{https://getbootstrap.com/docs/5.1/getting-started/download/}{getbootstrap.com}
+
         \end{itemize}
 
         \item Flask
@@ -405,14 +406,24 @@ Recipe Buddy shall also abide by the following technical constraints:
     \end{itemize}
 
 
+    \item Recipe Buddy will interface with its database using a RESTful API. (TENTATIVE)
+    \begin{itemize}
+
+        \item RESTful API specifications: \href{https://restfulapi.net/}{restfulapi.net}
+    
+    \end{itemize}            
+
 
     \item The data stored by Recipe Buddy must abide by the following constraints:
     \begin{itemize}
+
         \item Uploaded images must be no larger than 1024 x 768 pixels. (TENTATIVE)
         \item Uploaded images must be stored in .jpg, .png, or .webp file formats.
         \item Uploaded videos must be stored in .mp4 or .webm file formats.
         \item Uploaded files must be no more than 4MB in size. (TENTATIVE)
+    
     \end{itemize}
+
 \end{itemize}
 
 \section{User Documentation}
@@ -423,6 +434,7 @@ Recipe Buddy is designed under the following assumptions:
 \begin{itemize}
     \item Users will not try to use Recipe Buddy on an unsupported browser.
     \item All specified languages and frameworks are fully up to date and working on Recipe Buddy's host server.
+    \item A server hosting Recipe Buddy must have reliable internet connectivity, and it must have enough space to store Recipe Buddy's database.
 \end{itemize}
 
 \chapter{External Interface Requirements}
