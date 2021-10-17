@@ -403,7 +403,7 @@ Recipe Buddy shall also abide by the following technical constraints:
 
         \end{itemize}
 
-        \item pdocs3
+        \item pdocs
         \begin{itemize}
 
             \item Version 1.1.1 or newer
@@ -416,22 +416,31 @@ Recipe Buddy shall also abide by the following technical constraints:
     \end{itemize}
 
 
-    \item Recipe Buddy will interface with its database using a RESTful API. (TENTATIVE)
+    \item Recipe Buddy will interface with its database using a RESTful API.
     \begin{itemize}
 
         \item RESTful API specifications: \href{https://restfulapi.net/}{restfulapi.net}
     
-    \end{itemize}            
+    \end{itemize}
 
+    \item Recipe Buddy should be designed to save recipe data very quickly.
+    \begin{itemize}
+
+        \item Recipe data should be locally cached as it is entered by the user.
+        \item Recipe Buddy will provide a button to save recipe data on the edit recipe page.
+        \item When the user decides to save a recipe, recipe data should be serialized in no more than 0.5 seconds on a modern computer.
+        \item Immediately following serialization, the recipe data should be uploaded to the database.
+        \item When a recipe is saved, the user should be notified. This should occur no longer than 5 seconds after the user clicks the button to save their recipe, assuming that the user has a stable connection and is using a modern computer.
+
+    \end{itemize}
 
     \item The data stored by Recipe Buddy must abide by the following constraints:
     \begin{itemize}
 
-        \item Uploaded images must be no larger than 1024 x 768 pixels. (TENTATIVE)
         \item Uploaded images must be stored in .jpg, .png, or .webp file formats.
         \item Uploaded videos must be stored in .mp4, .mov, or .webm file formats.
-        \item Uploaded files must be no more than 4MB in size. (TENTATIVE)
-    
+        \item Uploaded files must be no more than 4MB in size.
+
     \end{itemize}
 
 \end{itemize}
@@ -445,6 +454,7 @@ Recipe Buddy is designed under the following assumptions:
     \item Users will not try to use Recipe Buddy on an unsupported browser.
     \item All specified languages and frameworks are fully up to date and working on Recipe Buddy's host server.
     \item A server hosting Recipe Buddy must have reliable internet connectivity, and it must have enough space to store Recipe Buddy's database.
+    \item A user signing up for Recipe Buddy will have an email with which to create their account.
 \end{itemize}
 
 \chapter{External Interface Requirements}
