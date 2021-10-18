@@ -26,6 +26,10 @@ jobs:
         with:
           root_file: srs.tex
           post_compile: makeglossaries srs
+      - name: Compile with glossary 📖
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: srs.tex
       - name: Upload artifacts 📤
         uses: actions/upload-artifact@v2
         with:
