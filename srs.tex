@@ -53,6 +53,11 @@
     name=LaTeX,
     description={Is the markup language used to prepare the document.}
 }
+\newglossaryentry{Python}
+{
+	name=Python,
+	description={Is a scripting langugage used by Recipe Buddy.}
+}
 
 \begin{document}
 
@@ -140,10 +145,10 @@ When updating this document, adhere to the following style guidelines:
 When writing code within a paragraph:
 \begin{itemize}
 \item For short snippets, it is okay to use inline code. For example: \\
-The Python command \texttt{ print( ... ) } writes to standard output. \\
+The \gls{Python} command \texttt{ print( ... ) } writes to standard output. \\
 In \gls{LaTeX}, this is done using the \texttt{ \textbackslash texttt\{ \} } command in-line with the rest of a paragraph.
 \item For longer snippets, please give the code its own block. For example: \\
-The following Python function will calculate the area of a circle: \\
+The following \gls{Python} function will calculate the area of a circle: \\
 \begin {verbatim}
 import math
 
@@ -340,7 +345,7 @@ Recipe Buddy shall also abide by the following technical constraints:
     \item Recipe Buddy shall be written with the following programming languages and frameworks:
     \begin{itemize}
 
-        \item Python
+        \item \gls{Python}
         \begin{itemize}
 
             \item Version 3.9.7 or newer
@@ -1041,48 +1046,19 @@ The login feature allows guests to login to their account and access their perso
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
-$<$If there are performance requirements for the product under various 
-circumstances, state them here and explain their rationale, to help the 
-developers understand the intent and make suitable design choices. Specify the 
-timing relationships for real time systems. Make such requirements as specific 
-as possible. You may need to state performance requirements for individual 
-functional requirements or features.$>$
+Recipe Buddy will be expected to run on all modern hardware, and will be optimized so that actions should not take more than a few seconds to be performed, with a couple exceptions. Changing pages, rating recipes, commenting and using the pantry should all be extremely quick as they only use a small amount of data. Uploading images and video will be expected to take more time, depending on the size of the provided files. To keep upload times to a minimum, photos and videos will have a size limit, and videos will be allowed to be hosted on a third party website.
 
 \section{Safety Requirements}
-$<$Specify those requirements that are concerned with possible loss, damage, or 
-harm that could result from the use of the product. Define any safeguards or 
-actions that must be taken, as well as actions that must be prevented. Refer to 
-any external policies or regulations that state safety issues that affect the 
-product’s design or use. Define any safety certifications that must be 
-satisfied.$>$
+Recipe Buddy will store all data on private servers, however it will interact with two third party apps, YouTube and Whisk. No private user data will be shared with these services, and their integration into Recipe Buddy will be minimal. Recipe Buddy will not cause damage to any device that uses the website. It is possible that Recipe Buddy will come to life and feast upon the flesh of puny mortals.
 
 \section{Security Requirements}
-$<$Specify any requirements regarding security or privacy issues surrounding use 
-of the product or protection of the data used or created by the product. Define 
-any user identity authentication requirements. Refer to any external policies or 
-regulations containing security issues that affect the product. Define any 
-security or privacy certifications that must be satisfied.$>$
+Users who create an account with Recipe Buddy will be expected to verify their account using an email address that they will provide upon account creation. It is assumed that only the user will have access to their account, or anyone the user gives access to. It is possible that a user's password could be stolen and their account compromised, however Recipe Buddy does not store any critical data. As a result the only risk of an account being compromised is the deletion of saved recipes, tools and pantry items, as well as the risk of their password being used to get into other held accounts.
 
 \section{Software Quality Attributes}
-$<$Specify any additional quality characteristics for the product that will be 
-important to either the customers or the developers. Some to consider are: 
-adaptability, availability, correctness, flexibility, interoperability, 
-maintainability, portability, reliability, reusability, robustness, testability, 
-and usability. Write these to be specific, quantitative, and verifiable when 
-possible. At the least, clarify the relative preferences for various attributes, 
-such as ease of use over ease of learning.$>$
+Recipe Buddy's interfaces will be designed and maintained to be very easy and intuitive to use. The visual design will be visually appealing to users and made to accommodate those who may otherwise have trouble accessing the website. There will also be feedback for a users actions which will inform them whether or not their action had an effect. Errors in the website will not be tolerated and will be fixed as quickly as possible when they are reported to the developers. If users lose connection to the website, they will still be able to view the page they are currently on, however many features may not work until connection is re-established.
 
 \section{Business Rules}
-$<$List any operating principles about the product, such as which individuals or 
-roles can perform which functions under specific circumstances. These are not 
-functional requirements in themselves, but they may imply certain functional 
-requirements to enforce the rules.$>$
-
-\chapter{Other Requirements}
-$<$Define any other requirements not covered elsewhere in the SRS.\@ This might 
-include database requirements, internationalization requirements, legal 
-requirements, reuse objectives for the project, and so on. Add any new sections 
-that are pertinent to the project.$>$
+Users that do not have an account with Recipe Buddy will not be able to access certain features of the product. Features that are exclusive to account holders include the Pantry and Tools, Recipe Creation, Profile, Commenting, Recipe Rating, Timer, Private Recipes and Video.
 
 \section{Appendix A: Glossary}
 %see https://en.wikibooks.org/wiki/LaTeX/Glossary
