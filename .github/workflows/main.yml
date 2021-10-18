@@ -25,6 +25,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: srs.tex
+          pre_compile: makeglossaries srs 
       - name: Upload artifacts 📤
         uses: actions/upload-artifact@v2
         with:
