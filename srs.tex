@@ -48,16 +48,47 @@
 
 \makeglossaries
 
+\newglossaryentry{Recipe Buddy}
+{
+	name={Recipe Buddy},
+	description={Is the software defined by this document}
+}
 \newglossaryentry{LaTeX}
 {
     name=LaTeX,
-    description={Is the markup language used to prepare the document.}
+    description={Is the markup language used to prepare the document}
 }
 \newglossaryentry{Python}
 {
 	name=Python,
-	description={Is a scripting langugage used by Recipe Buddy.}
+	description={Is a scripting langugage used by Recipe Buddy}
 }
+\newglossaryentry{MariaDB}
+{
+	name=MariaDB,
+	description={Is a database framework used by Recipe Buddy}
+}
+\newglossaryentry{HTTPs}
+{
+	name=HTTPs,
+	description={Is a protocol providing secure communication to a website}
+}
+\newglossaryentry{RESTful API}
+{
+	name={RESTful API},
+	description={Is a set of specifications and constraints for web communication}
+}
+\newglossaryentry{serialization}
+{
+	name=Serialization,
+	description={Is the process of converting program data into storable and transmittable data}
+}
+\newglossaryentry{serialized}
+{
+	name=Serialized,
+	description={\emph{See} \gls{serialization}}
+}
+
 
 \begin{document}
 
@@ -97,7 +128,7 @@
 \chapter{Introduction}
 
 \section{Purpose}
-$ $Recipe Buddy is a modern recipe sharing website intended to facilitate connections between our users with food and culinary arts.
+$ $\gls{Recipe Buddy} is a modern recipe sharing website intended to facilitate connections between our users with food and culinary arts.
 It creates a personalized experience for the user, showcases popular and trending recipes, and creates a community through various recipe sharing services.$ $
 
 \section{Document Conventions}
@@ -181,18 +212,18 @@ $ $
 \section{Intended Audience and Reading Suggestions}
 $ $This document is aimed at a wide audience:
 \begin{itemize}
-    \item Recipe Buddy developers should be able to go over this document to understand how the system functions.
+    \item \gls{Recipe Buddy} developers should be able to go over this document to understand how the system functions.
           Developers should have the ability to use this in conjunction with the system's documentation to gain a comprehensive understanding of the system's underlying features and overall design.
           Developers should also be able to use this document to understand who to design this system for and why the system is designed the way it is.
-          That way, with each new proposed update to Recipe Buddy, developers can assess if it would align with the system's design philosphy.
-    \item Recipe Buddy designers and clients should be able to go over this document to understand how the system is designed.
-          With any proposed updates or revisions to the system, designers should have the ability to refer to this document and ensure such changes align with Recipe Buddy's design philosophy.
+          That way, with each new proposed update to \gls{Recipe Buddy}, developers can assess if it would align with the system's design philosphy.
+    \item \gls{Recipe Buddy} designers and clients should be able to go over this document to understand how the system is designed.
+          With any proposed updates or revisions to the system, designers should have the ability to refer to this document and ensure such changes align with \gls{Recipe Buddy}'s design philosophy.
 \end{itemize}
 $ $
 
 \section{Project Scope}
-Recipe Buddy is a tool that allows registered users to organize their own recipies, view recipies of other registered users, and keep a catalog of food, kitchenware and applicances that they own. Recipe Buddy can also track dietary restrictions to offer a better user experince.
-$ $Recipe Buddy organizes recipies by:
+\gls{Recipe Buddy} is a tool that allows registered users to organize their own recipies, view recipies of other registered users, and keep a catalog of food, kitchenware and applicances that they own. \gls{Recipe Buddy} can also track dietary restrictions to offer a better user experince.
+$ $\gls{Recipe Buddy} organizes recipies by:
 \begin{itemize}
     \item Allowing users to create a recipe.
     \item Allowing users to modify their recipies.
@@ -202,7 +233,7 @@ $ $Recipe Buddy organizes recipies by:
     \item Allowing users to offer suggestions to other's recipies.
 \end{itemize}
 $ $
-$ $Recipe Buddy keeps a catalog of food and kitchenware items by:
+$ $\gls{Recipe Buddy} keeps a catalog of food and kitchenware items by:
 \begin{itemize}
     \item Allowing for a detailed list of food items available in a users panty.
     \item Allowing for a user to add all items from a particular recipe into their panty.
@@ -210,7 +241,7 @@ $ $Recipe Buddy keeps a catalog of food and kitchenware items by:
     \item Allowing users to edit or modify these lists at any time from the user menu.
 \end{itemize}
 $ $
-$ $Recipe Buddy tracks dietary restrictions by:
+$ $\gls{Recipe Buddy} tracks dietary restrictions by:
 \begin{itemize}
     \item Allowing users to keep a detailed list of specific ingredients marked as allergens.
     \item Allowing users to keep a detailed list of restricted categories. (i.e.\ dairy for lactose intolerant or bread for gluten-free).
@@ -218,7 +249,7 @@ $ $Recipe Buddy tracks dietary restrictions by:
 $ $
 
 \section{References}
-Throughout this document, mutliple web addresses are referred to in order to give a better description of the Recipe Buddy software.
+Throughout this document, mutliple web addresses are referred to in order to give a better description of the \gls{Recipe Buddy} software.
 
 \begin{itemize}
     \item Reference 1
@@ -242,11 +273,11 @@ Throughout this document, mutliple web addresses are referred to in order to giv
 \chapter{Overall Description}
 
 \section{Product Perspective}
-Recipe Buddy is a multi-functional tool for organizing recipes, pantry items and dietary restrictions.
-Although several recipe websites already exist, Recipe Buddy offers many powerful customizations and search features that seperate it from the competition.
+\gls{Recipe Buddy} is a multi-functional tool for organizing recipes, pantry items and dietary restrictions.
+Although several recipe websites already exist, \gls{Recipe Buddy} offers many powerful customizations and search features that seperate it from the competition.
 
 \section{Product Functions}
-$ $The Recipe Buddy software offers:
+$ $The \gls{Recipe Buddy} software offers:
 \begin{itemize}
     \item A limited publicly-accessible database of Recipes.
     \item User registration to access full features of the website.
@@ -287,14 +318,14 @@ $ $
 \section{User Classes and Characteristics}
 Guest:
 \begin{itemize}
-    \item A guest is defined as someone browsing the Recipe Buddy website, but have not created a user account or signed in.
-    \item Guests have limited access to the resources available on Recipe Buddy.
+    \item A guest is defined as someone browsing the \gls{Recipe Buddy} website, but have not created a user account or signed in.
+    \item Guests have limited access to the resources available on \gls{Recipe Buddy}.
           \begin{itemize}
               \item Guests will not be able to access various parts of the software tutorial videos.
               \item Guests are not allowed to cook recipes.
               \item Guests are not allowed to store user-specific data such as dietary restrictions, favorited recipes, pantry items or cookware items.
               \item Guests cannot leave comments or reviews on recipies.
-              \item Guests cannot upload or contribute recipes to the Recipe Buddy database.
+              \item Guests cannot upload or contribute recipes to the \gls{Recipe Buddy} database.
               \item Guests cannot access powerful search features.
               \item Guests cannot view private recipes shared with them.
           \end{itemize}
@@ -302,21 +333,21 @@ Guest:
 
 User:
 \begin{itemize}
-    \item A user is defined as someone browsing or contributing to the Recipe Buddy website, who has registed a user account ans signed in.
-    \item Users have full access to the resources available on Recipe Buddy.
+    \item A user is defined as someone browsing or contributing to the \gls{Recipe Buddy} website, who has registed a user account ans signed in.
+    \item Users have full access to the resources available on \gls{Recipe Buddy}.
           \begin{itemize}
-              \item Users can view the full video tutorial on how to access Recipe Buddy features.
+              \item Users can view the full video tutorial on how to access \gls{Recipe Buddy} features.
               \item Users can cook recipes.
               \item Users can store user-specific data such as dietary restrictions, favorited recipes, pantry items or cookware items.
               \item Users can leave comments and reviews on recipies.
-              \item Users can upload and contribute recipes to the Recipe Buddy database.
+              \item Users can upload and contribute recipes to the \gls{Recipe Buddy} database.
               \item Users can access powerful search features.
               \item Users can access private recipies shared with them.
           \end{itemize}
 \end{itemize}
 
 \section{Operating Environment}
-Although Recipe Buddy is expected to work on modern browsers, The Recipe Buddy client will only be tested extensively to ensure proper functionality across the top three major web browsers by marketshare including:
+Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Recipe Buddy} client will only be tested extensively to ensure proper functionality across the top three major web browsers by marketshare including:
 \begin{itemize}
     \item Google Chrome (Desktop)
     \item Apple Safari (Desktop)
@@ -324,25 +355,25 @@ Although Recipe Buddy is expected to work on modern browsers, The Recipe Buddy c
 \end{itemize}
 
 \section{Design and Implementation Constraints}
-Recipe Buddy shall abide by the following legal constraints:
+\gls{Recipe Buddy} shall abide by the following legal constraints:
 \begin{itemize}
     \item Children's Online Privacy Protection Act (COPPA)
     \begin{itemize}
-        \item Recipe Buddy shall not allow children, as defined by COPPA, to register for the service.
+        \item \gls{Recipe Buddy} shall not allow children, as defined by COPPA, to register for the service.
         \item COPPA defines a child as anyone under the age of 13.
     \end{itemize}
     \item California Consumer Privacy Act (CCPA)
     \begin{itemize}
-        \item Recipe Buddy will allow users to query their personal information, as collected by Recipe Buddy.
-        \item Recipe Buddy will allow users to delete their account and all of the information attached to it.
-        \item Recipe Buddy cannot sell a user's information.
-        \item Recipe Buddy cannot treat a user exercising their CCPA rights any different from other users.
+        \item \gls{Recipe Buddy} will allow users to query their personal information, as collected by \gls{Recipe Buddy}.
+        \item \gls{Recipe Buddy} will allow users to delete their account and all of the information attached to it.
+        \item \gls{Recipe Buddy} cannot sell a user's information.
+        \item \gls{Recipe Buddy} cannot treat a user exercising their CCPA rights any different from other users.
     \end{itemize}
 \end{itemize}  
 
-Recipe Buddy shall also abide by the following technical constraints:
+\gls{Recipe Buddy} shall also abide by the following technical constraints:
 \begin{itemize}
-    \item Recipe Buddy shall be written with the following programming languages and frameworks:
+    \item \gls{Recipe Buddy} shall be written with the following programming languages and frameworks:
     \begin{itemize}
 
         \item \gls{Python}
@@ -355,7 +386,7 @@ Recipe Buddy shall also abide by the following technical constraints:
 
         \end{itemize}
 
-        \item MariaDB
+        \item \gls{MariaDB}
         \begin{itemize}
 
             \item Version 10.6.4 or newer
@@ -431,25 +462,25 @@ Recipe Buddy shall also abide by the following technical constraints:
     \end{itemize}
 
 
-    \item Recipe Buddy will interface with its database using a RESTful API.
+    \item \gls{Recipe Buddy} will interface with its database using a \gls{RESTful API}.
     \begin{itemize}
 
-        \item RESTful API specifications: \href{https://restfulapi.net/}{restfulapi.net}
+        \item \gls{RESTful API} specifications: \href{https://restfulapi.net/}{restfulapi.net}
     
     \end{itemize}
 
-    \item Recipe Buddy should be designed to save recipe data very quickly.
+    \item \gls{Recipe Buddy} should be designed to save recipe data very quickly.
     \begin{itemize}
 
         \item Recipe data should be locally cached as it is entered by the user.
-        \item Recipe Buddy will provide a button to save recipe data on the edit recipe page.
-        \item When the user decides to save a recipe, recipe data should be serialized in no more than 0.5 seconds on a modern computer.
-        \item Immediately following serialization, the recipe data should be uploaded to the database.
+        \item \gls{Recipe Buddy} will provide a button to save recipe data on the edit recipe page.
+        \item When the user decides to save a recipe, recipe data should be \gls{serialized} in no more than 0.5 seconds on a modern computer.
+        \item Immediately following \gls{serialization}, the recipe data should be uploaded to the database.
         \item When a recipe is saved, the user should be notified. This should occur no longer than 5 seconds after the user clicks the button to save their recipe, assuming that the user has a stable connection and is using a modern computer.
 
     \end{itemize}
 
-    \item The data stored by Recipe Buddy must abide by the following constraints:
+    \item The data stored by \gls{Recipe Buddy} must abide by the following constraints:
     \begin{itemize}
 
         \item Uploaded images must be stored in .jpg, .png, or .webp file formats.
@@ -461,15 +492,15 @@ Recipe Buddy shall also abide by the following technical constraints:
 \end{itemize}
 
 \section{User Documentation}
-Recipe Buddy will feature a web-based video tutorial that will help wesbite users and visitors explore Recipe Buddy features. The Recipe Buddy software also features a support page with multiple FAQ questions and how-to tutorials.
+\gls{Recipe Buddy} will feature a web-based video tutorial that will help wesbite users and visitors explore \gls{Recipe Buddy} features. The \gls{Recipe Buddy} software also features a support page with multiple FAQ questions and how-to tutorials.
 
 \section{Assumptions and Dependencies}
-Recipe Buddy is designed under the following assumptions:
+\gls{Recipe Buddy} is designed under the following assumptions:
 \begin{itemize}
-    \item Users will not try to use Recipe Buddy on an unsupported browser.
-    \item All specified languages and frameworks are fully up to date and working on Recipe Buddy's host server.
-    \item A server hosting Recipe Buddy must have reliable internet connectivity, and it must have enough space to store Recipe Buddy's database.
-    \item A user signing up for Recipe Buddy will have an email with which to create their account.
+    \item Users will not try to use \gls{Recipe Buddy} on an unsupported browser.
+    \item All specified languages and frameworks are fully up to date and working on \gls{Recipe Buddy}'s host server.
+    \item A server hosting \gls{Recipe Buddy} must have reliable internet connectivity, and it must have enough space to store \gls{Recipe Buddy}'s database.
+    \item A user signing up for \gls{Recipe Buddy} will have an email with which to create their account.
 \end{itemize}
 
 \chapter{External Interface Requirements}
@@ -498,10 +529,10 @@ Please refer to the web browser's minimum specifications in order to get an idea
 \end{itemize}
 
 \section{Software Interfaces}
-The Recipe Buddy client software relies on a web browser in order to properly fetch and display data within the Recipe Buddy sytem. Web browers are not operating system restricted as they run on all major operating systems.
+The \gls{Recipe Buddy} client software relies on a web browser in order to properly fetch and display data within the \gls{Recipe Buddy} sytem. Web browers are not operating system restricted as they run on all major operating systems.
 
 \section{Communications Interfaces}
-The Recipe Buddy client software interface runs in a web browser and communicates via the HTTPs protocol. An internet connection of speed 2.5Mbps - 5Mbps is required to use the full features of Recipe Buddy such as the video tutorial and embedded videos within recipes.
+The \gls{Recipe Buddy} client software interface runs in a web browser and communicates via the \gls{HTTPs} protocol. An internet connection of speed 2.5Mbps - 5Mbps is required to use the full features of \gls{Recipe Buddy} such as the video tutorial and embedded videos within recipes.
 
 \chapter{System Features}
 
@@ -509,7 +540,7 @@ The Recipe Buddy client software interface runs in a web browser and communicate
 
 \subsection{Description and Priority}
 
-The recipe creation feature allows registered users to upload recipes to the Recipe Buddy recipe database. Various attributes about the recipe such as ingredients, instrctions, videos, images, cook time, cook temperature can be set by the user.
+The recipe creation feature allows registered users to upload recipes to the \gls{Recipe Buddy} recipe database. Various attributes about the recipe such as ingredients, instrctions, videos, images, cook time, cook temperature can be set by the user.
 
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -557,7 +588,7 @@ The recipe creation feature allows registered users to upload recipes to the Rec
 
 \section{Recipe: Recipe Pages}
 
-The recipe pages feature allows both guests and registered users to view recipe information from the Recipe Buddy recipe database. Guests can only view public recipes, while registered users can view public recipes, their own private recipes and other private recipes shared to them by other users.
+The recipe pages feature allows both guests and registered users to view recipe information from the \gls{Recipe Buddy} recipe database. Guests can only view public recipes, while registered users can view public recipes, their own private recipes and other private recipes shared to them by other users.
 
 \subsection{Description and Priority}
 \begin{center}
@@ -936,7 +967,7 @@ The search feature allows guests and registerd users to search for recipes using
 
 \subsection{Description and Priority}
 
-The flags feature allows the Recipe Buddy system to notify users of certain attributes of a recipe before the user starts cooking the recipe. For example, if a recipe contains milk, but the user has previously selected that they are lactose intolerant, the Recipe Buddy system will notify them of this before they start cooking the recipe containing milk.
+The flags feature allows the \gls{Recipe Buddy} system to notify users of certain attributes of a recipe before the user starts cooking the recipe. For example, if a recipe contains milk, but the user has previously selected that they are lactose intolerant, the \gls{Recipe Buddy} system will notify them of this before they start cooking the recipe containing milk.
 
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -974,7 +1005,7 @@ The flags feature allows the Recipe Buddy system to notify users of certain attr
 
 \subsection{Description and Priority}
 
-The account creation feature allows for guests to enter information in order to create a Recipe Buddy account.
+The account creation feature allows for guests to enter information in order to create a \gls{Recipe Buddy} account.
 
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -1011,7 +1042,7 @@ The account creation feature allows for guests to enter information in order to 
 
 \subsection{Description and Priority}
 
-The login feature allows guests to login to their account and access their personalized information in Recipe Buddy.
+The login feature allows guests to login to their account and access their personalized information in \gls{Recipe Buddy}.
 
 \begin{center}
     \begin{tabular}{| c | c | c | c |}
@@ -1046,19 +1077,19 @@ The login feature allows guests to login to their account and access their perso
 \chapter{Other Nonfunctional Requirements}
 
 \section{Performance Requirements}
-Recipe Buddy will be expected to run on all modern hardware, and will be optimized so that actions should not take more than a few seconds to be performed, with a couple exceptions. Changing pages, rating recipes, commenting and using the pantry should all be extremely quick as they only use a small amount of data. Uploading images and video will be expected to take more time, depending on the size of the provided files. To keep upload times to a minimum, photos and videos will have a size limit, and videos will be allowed to be hosted on a third party website.
+\gls{Recipe Buddy} will be expected to run on all modern hardware, and will be optimized so that actions should not take more than a few seconds to be performed, with a couple exceptions. Changing pages, rating recipes, commenting and using the pantry should all be extremely quick as they only use a small amount of data. Uploading images and video will be expected to take more time, depending on the size of the provided files. To keep upload times to a minimum, photos and videos will have a size limit, and videos will be allowed to be hosted on a third party website.
 
 \section{Safety Requirements}
-Recipe Buddy will store all data on private servers, however it will interact with two third party apps, YouTube and Whisk. No private user data will be shared with these services, and their integration into Recipe Buddy will be minimal. Recipe Buddy will not cause damage to any device that uses the website. It is possible that Recipe Buddy will come to life and feast upon the flesh of puny mortals.
+\gls{Recipe Buddy} will store all data on private servers, however it will interact with two third party apps, YouTube and Whisk. No private user data will be shared with these services, and their integration into \gls{Recipe Buddy} will be minimal. \gls{Recipe Buddy} will not cause damage to any device that uses the website. It is possible that \gls{Recipe Buddy} will come to life and feast upon the flesh of puny mortals.
 
 \section{Security Requirements}
-Users who create an account with Recipe Buddy will be expected to verify their account using an email address that they will provide upon account creation. It is assumed that only the user will have access to their account, or anyone the user gives access to. It is possible that a user's password could be stolen and their account compromised, however Recipe Buddy does not store any critical data.
+Users who create an account with \gls{Recipe Buddy} will be expected to verify their account using an email address that they will provide upon account creation. It is assumed that only the user will have access to their account, or anyone the user gives access to. It is possible that a user's password could be stolen and their account compromised, however \gls{Recipe Buddy} does not store any critical data.
 
 \section{Software Quality Attributes}
-Recipe Buddy's interfaces will be designed and maintained to be very easy and intuitive to use. The visual design will be visually appealing to users and made to accommodate those who may otherwise have trouble accessing the website. There will also be feedback for a users actions which will inform them whether or not their action had an effect. Errors in the website will not be tolerated and will be fixed as quickly as possible when they are reported to the developers. If users lose connection to the website, they will still be able to view the page they are currently on, however many features may not work until connection is re-established.
+\gls{Recipe Buddy}'s interfaces will be designed and maintained to be very easy and intuitive to use. The visual design will be visually appealing to users and made to accommodate those who may otherwise have trouble accessing the website. There will also be feedback for a users actions which will inform them whether or not their action had an effect. Errors in the website will not be tolerated and will be fixed as quickly as possible when they are reported to the developers. If users lose connection to the website, they will still be able to view the page they are currently on, however many features may not work until connection is re-established.
 
 \section{Business Rules}
-Users that do not have an account with Recipe Buddy will not be able to access certain features of the product. Features that are exclusive to account holders include the Pantry and Tools, Recipe Creation, Profile, Commenting, Recipe Rating, Timer, Private Recipes and Video.
+Users that do not have an account with \gls{Recipe Buddy} will not be able to access certain features of the product. Features that are exclusive to account holders include the Pantry and Tools, Recipe Creation, Profile, Commenting, Recipe Rating, Timer, Private Recipes and Video.
 
 \section{Appendix A: Glossary}
 %see https://en.wikibooks.org/wiki/LaTeX/Glossary
