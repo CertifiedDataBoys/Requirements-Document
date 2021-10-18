@@ -1,6 +1,8 @@
 srs.aux
 srs.fdb_latexmk
 srs.fls
+srs.glo
+srs.ist
 srs.log
 srs.out
 srs.pdf
