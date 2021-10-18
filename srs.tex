@@ -88,6 +88,27 @@
 	name=Serialized,
 	description={\emph{See} \gls{serialization}}
 }
+\newglossaryentry{COPPA}
+{
+	name=COPPA,
+	description={Is a federal law in the U.S. that governs how to operate a website accessed by children under the age of 13}
+}
+\newglossaryentry{CCPA}
+{
+	name=CCPA,
+	description={Is a state law in California that governs how websites handle user data}
+}
+\newglossaryentry{SQL injection}
+{
+	name={SQL injection},
+	description={Refers to the process of hacking a database where a user runs their own malicious SQL code}
+}
+\newglossaryentry{XSS injection}
+{
+	name={XSS injection},
+	description={Refers to the process of hacking a website where a user inserts their own malicious code into a website.
+	This malicious code can then be run by users of that same website.}
+}
 
 
 \begin{document}
@@ -357,17 +378,17 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
 \section{Design and Implementation Constraints}
 \gls{Recipe Buddy} shall abide by the following legal constraints:
 \begin{itemize}
-    \item Children's Online Privacy Protection Act (COPPA)
+    \item Children's Online Privacy Protection Act (\gls{COPPA})
     \begin{itemize}
-        \item \gls{Recipe Buddy} shall not allow children, as defined by COPPA, to register for the service.
-        \item COPPA defines a child as anyone under the age of 13.
+        \item \gls{Recipe Buddy} shall not allow children, as defined by \gls{COPPA}, to register for the service.
+        \item \gls{COPPA} defines a child as anyone under the age of 13.
     \end{itemize}
-    \item California Consumer Privacy Act (CCPA)
+    \item California Consumer Privacy Act (\gls{CCPA})
     \begin{itemize}
         \item \gls{Recipe Buddy} will allow users to query their personal information, as collected by \gls{Recipe Buddy}.
         \item \gls{Recipe Buddy} will allow users to delete their account and all of the information attached to it.
         \item \gls{Recipe Buddy} cannot sell a user's information.
-        \item \gls{Recipe Buddy} cannot treat a user exercising their CCPA rights any different from other users.
+        \item \gls{Recipe Buddy} cannot treat a user exercising their \gls{CCPA} rights any different from other users.
     \end{itemize}
 \end{itemize}  
 
@@ -756,7 +777,7 @@ The commenting feature allows registered users to leave a comment on a particula
         \hline
         Testing        & Client and focus group frontend testing, unit testing for backend \\
         \hline
-        Risks          & SQL injection, XSS injection                                      \\
+        Risks          & \gls{SQL injection}, \gls{XSS injection}                          \\
         \hline
     \end{tabular}
 \end{center}
@@ -945,7 +966,7 @@ The search feature allows guests and registerd users to search for recipes using
         \hline
         Testing         & Client and focus group frontend testing, unit testing for backend    \\
         \hline
-        Risks           & SQL injection, XSS injection                                         \\
+        Risks           & \gls{SQL injection}, \gls{XSS injection}                             \\
         \hline
     \end{tabular}
 \end{center}
@@ -982,7 +1003,7 @@ The flags feature allows the \gls{Recipe Buddy} system to notify users of certai
         \hline
         Testing         & Client and focus group frontend testing, unit testing for backend \\
         \hline
-        Risks           & SQL injection, XSS injection                                      \\
+        Risks           & \gls{SQL injection}, \gls{XSS injection}                          \\
         \hline
     \end{tabular}
 \end{center}
@@ -1020,7 +1041,7 @@ The account creation feature allows for guests to enter information in order to 
         \hline
         Testing         & Client and focus group frontend testing, unit testing for backend \\
         \hline
-        Risks           & SQL injection, XSS injection                                      \\
+        Risks           & \gls{SQL injection}, \gls{XSS injection}                          \\
         \hline
     \end{tabular}
 \end{center}
@@ -1057,7 +1078,7 @@ The login feature allows guests to login to their account and access their perso
         \hline
         Testing         & Client and focus group frontend testing, unit testing for backend \\
         \hline
-        Risks           & SQL injection, XSS injection, Account Theft                       \\
+        Risks           & \gls{SQL injection}, \gls{XSS injection}, Account Theft           \\
         \hline
     \end{tabular}
 \end{center}
