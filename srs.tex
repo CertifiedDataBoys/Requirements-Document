@@ -44,6 +44,16 @@
 
 %}
 \usepackage{hyperref}
+\usepackage{glossaries}
+
+\makeglossaries
+
+\newglossaryentry{LaTeX}
+{
+    name=LaTeX,
+    description={Is the markup language used to prepare the document.}
+}
+
 \begin{document}
 
 \begin{flushright}
@@ -113,15 +123,15 @@ When updating this document, adhere to the following style guidelines:
 \begin{itemize}
     \item The first paragraph of each section or subsection does not need to be indented.
           Subsequent paragraphs should be indented.
-          In LaTeX, that is done by default by typing two blank spaces ``\ \ " after a paragraph.
-    \item This document should be typed using the default LaTeX font and styling.
+          In \gls{LaTeX}, that is done by default by typing two blank spaces ``\ \ " after a paragraph.
+    \item This document should be typed using the default \gls{LaTeX} font and styling.
     \item When writing numbers within a paragraph:
           \begin{itemize}
               \item Whole numbers between zero and fifteen should be typed alphaetically.
               \item Whole numbers equal to or above 16 should be typed numerically.
               \item Decimal numbers, such as 3.14, should be typed numerically.
               \item Fractions should be typed in the form {$\frac{1}{2}$}.
-                    In LaTeX, this can be done using the following code:
+                    In \gls{LaTeX}, this can be done using the following code:
                     \\ \texttt{ \{\$ \textbackslash frac\{1\}\{2\} \$\} }
           \end{itemize}
 \end{itemize}
@@ -131,7 +141,7 @@ When writing code within a paragraph:
 \begin{itemize}
 \item For short snippets, it is okay to use inline code. For example: \\
 The Python command \texttt{ print( ... ) } writes to standard output. \\
-In LaTeX, this is done using the \texttt{ \textbackslash texttt\{ \} } command in-line with the rest of a paragraph.
+In \gls{LaTeX}, this is done using the \texttt{ \textbackslash texttt\{ \} } command in-line with the rest of a paragraph.
 \item For longer snippets, please give the code its own block. For example: \\
 The following Python function will calculate the area of a circle: \\
 \begin {verbatim}
@@ -144,7 +154,7 @@ def area_circle(radius):
 r_squared = radius ** 2
 return math.pi * r_squared
 \end{verbatim}
-This can be done by using a \texttt{ verbatim } block in LaTeX.  
+This can be done by using a \texttt{ verbatim } block in \gls{LaTeX}.  
 
 Please remember that this is a requirements document, and not the system's documentation!
 Remember to only use code in this document when it is needed!
@@ -1076,10 +1086,7 @@ that are pertinent to the project.$>$
 
 \section{Appendix A: Glossary}
 %see https://en.wikibooks.org/wiki/LaTeX/Glossary
-$<$Define all the terms necessary to properly interpret the SRS, including 
-acronyms and abbreviations. You may wish to build a separate glossary that spans 
-multiple projects or the entire organization, and just include terms specific to 
-a single project in each SRS.$>$
+\printglossaries
 
 \section{Appendix B: Analysis Models}
 $<$Optionally, include any pertinent analysis models, such as data flow 

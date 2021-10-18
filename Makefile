@@ -1,5 +1,6 @@
 all:
 	xelatex srs.tex
+	makeglossaries srs
 	xelatex srs.tex
 	$(MAKE) clean
 
