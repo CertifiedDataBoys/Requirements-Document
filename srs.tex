@@ -39,7 +39,7 @@
     urlcolor=black,        % color of external links
     linktoc=page            % only page is linked
 }%
-\def\myversion{0.1}
+\def\myversion{1.1}
 %\title{%
 
 %}
@@ -48,66 +48,190 @@
 
 \makeglossaries
 
+% Define Recipe Buddy itself
 \newglossaryentry{Recipe Buddy}
 {
 	name={Recipe Buddy},
 	description={Is the software defined by this document}
 }
+
+% Software related to the document
 \newglossaryentry{LaTeX}
 {
     name=LaTeX,
     description={Is the markup language used to prepare the document}
 }
+
+% Software used by Recipe Buddy
 \newglossaryentry{Python}
 {
 	name=Python,
-	description={Is a scripting langugage used by Recipe Buddy}
+	description={Is a scripting langugage used by \gls{Recipe Buddy}}
 }
+
+\newglossaryentry{Flask}
+{
+	name=Flask,
+	description={Is a \gls{Python}-based web framework used by \gls{Recipe Buddy}}
+}
+
 \newglossaryentry{MariaDB}
 {
 	name=MariaDB,
-	description={Is a database framework used by Recipe Buddy}
+	description={Is a database framework used by \gls{Recipe Buddy}}
 }
-\newglossaryentry{HTTPs}
+
+\newglossaryentry{SQL}
 {
-	name=HTTPs,
-	description={Is a protocol providing secure communication to a website}
+	name=SQL,
+	description={Is the language used by \gls{MariaDB} to communicate with a database}
 }
-\newglossaryentry{RESTful API}
+
+\newglossaryentry{Docker}
 {
-	name={RESTful API},
-	description={Is a set of specifications and constraints for web communication}
+	name=Docker,
+	description={Is software providing a virtual platform, or ``container," on which \gls{Recipe Buddy} resides}
 }
-\newglossaryentry{serialization}
+
+\newglossaryentry{Docker Compose}
 {
-	name=Serialization,
-	description={Is the process of converting program data into storable and transmittable data}
+	name={Docker Compose},
+	description={Is a tool used to manage multiple \gls{Docker} containers and run them as a single application}
 }
-\newglossaryentry{serialized}
+
+\newglossaryentry{HTML}
 {
-	name=Serialized,
-	description={\emph{See} \gls{serialization}}
+	name=HTML,
+	description={Is a language used to describe the structure of a webpage}
 }
-\newglossaryentry{COPPA}
+
+\newglossaryentry{JavaScript}
 {
-	name=COPPA,
-	description={Is a federal law in the U.S. that governs how to operate a website accessed by children under the age of 13}
+	name=JavaScript,
+	description={Is a language used to describe the functions of a webpage}
 }
-\newglossaryentry{CCPA}
+
+\newglossaryentry{CSS}
 {
-	name=CCPA,
-	description={Is a state law in California that governs how websites handle user data}
+	name=CSS,
+	description={Is a language used to describe the appearance of a webpage}
 }
+
+\newglossaryentry{Bootstrap}
+{
+	name=Bootstrap,
+	description={Is a \gls{frontend} web development toolkit used by \gls{Recipe Buddy}}
+}
+
+% Definitions related to cybersecurity
 \newglossaryentry{SQL injection}
 {
 	name={SQL injection},
-	description={Refers to the process of hacking a database where a user runs their own malicious SQL code}
+	description={Refers to the process of hacking a database where a user runs their own malicious \gls{SQL} code. \emph{see} \gls{SQL}}
 }
+
 \newglossaryentry{XSS injection}
 {
 	name={XSS injection},
 	description={Refers to the process of hacking a website where a user inserts their own malicious code into a website.
 	This malicious code can then be run by users of that same website}
+}
+
+% Definitions related to documentation
+\newglossaryentry{pdocs}
+{
+	name=pdocs,
+	description={Is a \gls{Python} library used to generate \gls{documentation} of \gls{Python} code.}
+}
+
+\newglossaryentry{documentation}
+{
+	name=documentation,
+	description={Refers to software's technical documents.},
+}
+
+\newglossaryentry{Documentation}
+{
+	name=Documentation,
+	description={Refers to software's technical documents.},
+	parent=documentation
+}
+
+% Other "software" definitions --- maybe this isn't
+% software, per se, but it is related. Things like
+% protocols, algorithms, and APIs go here.
+\newglossaryentry{ECMAScript}
+{
+	name=ECMAScript,
+	description={Is a set of rules and constraints that define \gls{JavaScript}}
+}
+
+\newglossaryentry{HTTPs}
+{
+	name=HTTPs,
+	description={Is a protocol providing secure communication to a website}
+}
+
+\newglossaryentry{RESTful API}
+{
+	name={RESTful API},
+	description={Is a set of specifications and constraints for web communication}
+}
+
+\newglossaryentry{serialization}
+{
+	name=serialization,
+	description={Is the process of converting a program's internal data into storable and transmittable data}
+}
+
+\newglossaryentry{serialized}
+{
+	name=serialized,
+	description={\emph{See} \gls{serialization}}
+}
+
+\newglossaryentry{frontend}
+{
+	name=frontend,
+	description={Is the layer of software presented to an end user}
+}
+
+\newglossaryentry{backend}
+{
+	name=backend,
+	description={Is the layer of software that manages \gls{Recipe Buddy}'s internal functions. It is hidden from an end user}
+}
+
+\newglossaryentry{unit testing}
+{
+	name={unit testing},
+	description={Is a method of software testing where every function is tested individually}
+}
+
+\newglossaryentry{Functional Requirements}
+{
+	name={Functional Requirements},
+	description={describe the services that \gls{Recipe Buddy} must offer}
+}
+
+\newglossaryentry{Nonfunctional Requirements}
+{
+	name={Nonfunctional Requirements},
+	description={describe the systems that \gls{Recipe Buddy} must be built on}
+}
+
+
+% Legal definitions
+\newglossaryentry{COPPA}
+{
+	name=COPPA,
+	description={Is a federal law in the U.S. that governs how to operate a website accessed by children under the age of thirteen}
+}
+
+\newglossaryentry{CCPA}
+{
+	name=CCPA,
+	description={Is a state law in California that governs how websites handle user data}
 }
 
 
@@ -141,7 +265,12 @@
         \midrule
         Name             & Date       & Reason For Changes & Version \\
         \midrule
-        All team members & Oct 8 2021 & Initial doc        & 0.1     \\
+        All team members & Oct 8 2021 & Initial doc        & 1.0     \\
+        \midrule
+        Matthew Sprague
+                         & Oct 20 2021
+                         & Updated dependencies \& glossary
+                         & 1.1                                       \\
         \midrule
     \end{tabular}
 \end{center}
@@ -213,17 +342,17 @@ return math.pi * r_squared
 \end{verbatim}
 This can be done by using a \texttt{ verbatim } block in \gls{LaTeX}.  
 
-Please remember that this is a requirements document, and not the system's documentation!
+Please remember that this is a requirements document, and not the system's \gls{documentation}!
 Remember to only use code in this document when it is needed!
 That is,
 \begin{itemize}
     \item Write code that clearly illustrates what you are doing.
     \item Write code that is concise.
     \item Explain what your code is doing such that a reader with minimal technical skill can understand what the code is doing.
-    \item If the code takes too long to explain, save it for the system's documentation.
+    \item If the code takes too long to explain, save it for the system's \gls{documentation}.
     \item Try not to take up more than half of a page with a block of code.
     \item Never take up more than an entire page with a block of code.
-    \item Aim to have minimal overlap between the code in this document and the code in our system's documentation.
+    \item Aim to have minimal overlap between the code in this document and the code in our system's \gls{documentation}.
     \item The code in this document must convey meaningful information to all readers.
           It should be useful for developers, as well as non-developers.
 \end{itemize}
@@ -234,7 +363,7 @@ $ $
 $ $This document is aimed at a wide audience:
 \begin{itemize}
     \item \gls{Recipe Buddy} developers should be able to go over this document to understand how the system functions.
-          Developers should have the ability to use this in conjunction with the system's documentation to gain a comprehensive understanding of the system's underlying features and overall design.
+          Developers should have the ability to use this in conjunction with the system's \gls{documentation} to gain a comprehensive understanding of the system's underlying features and overall design.
           Developers should also be able to use this document to understand who to design this system for and why the system is designed the way it is.
           That way, with each new proposed update to \gls{Recipe Buddy}, developers can assess if it would align with the system's design philosphy.
     \item \gls{Recipe Buddy} designers and clients should be able to go over this document to understand how the system is designed.
@@ -402,7 +531,7 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
 
             \item Version 3.9.7 or newer
             \item Webpage: \href{https://www.python.org/}{www.python.org}
-            \item Documentation: \href{https://docs.python.org/3.9/}{docs.python.org}
+            \item \gls{Documentation}: \href{https://docs.python.org/3.9/}{docs.python.org}
             \item Download: \href{https://www.python.org/downloads/release/python-397/}{www.python.org}
 
         \end{itemize}
@@ -412,70 +541,70 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
 
             \item Version 10.6.4 or newer
             \item Webpage: \href{https://mariadb.org/}{mariadb.org}
-            \item Documentation: \href{https://mariadb.com/kb/en/}{mariadb.org}
+            \item \gls{Documentation}: \href{https://mariadb.com/kb/en/}{mariadb.org}
             \item Download: \href{https://mariadb.org/download/?tab=mariadb&release=10.6.4&product=mariadb}{mariadb.org}
         
         \end{itemize}
         
-        \item HTML5
+        \item \gls{HTML}5
         \begin{itemize}
         
-            \item Documentation: \href{https://developer.mozilla.org/en-US/docs/Web/HTML}{developer.mozilla.org}
+            \item \gls{Documentation}: \href{https://developer.mozilla.org/en-US/docs/Web/HTML}{developer.mozilla.org}
         
         \end{itemize}
         
-        \item CSS3
+        \item \gls{CSS}3
         \begin{itemize}
         
-            \item Documentation: \href{https://developer.mozilla.org/en-US/docs/Web/CSS}{developer.mozilla.org}
+            \item \gls{Documentation}: \href{https://developer.mozilla.org/en-US/docs/Web/CSS}{developer.mozilla.org}
         
         \end{itemize}
 
-        \item JavaScript
+        \item \gls{JavaScript}
         \begin{itemize}
 
-            \item Specified by ECMAScript 2021
-            \item JavaScript documentation: \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{developer.mozilla.org}
-            \item ECMAScript 2021 documentation: \href{https://www.ecma-international.org/wp-content/uploads/ECMA-262_12th_edition_june_2021.pdf}{www.ecma-international.org}
+            \item Specified by \gls{ECMAScript} 2021
+            \item \gls{JavaScript} \gls{documentation}: \href{https://developer.mozilla.org/en-US/docs/Web/JavaScript}{developer.mozilla.org}
+            \item \gls{ECMAScript} 2021 \gls{documentation}: \href{https://www.ecma-international.org/wp-content/uploads/ECMA-262_12th_edition_june_2021.pdf}{www.ecma-international.org}
 
         \end{itemize}
         
-        \item Docker
+        \item \gls{Docker}
         \begin{itemize}
         
             \item Version 20.10.9 or newer
-            \item Docker website: \href{https://www.docker.com/}{docker.com}
-            \item Documentation: \href{https://docs.docker.com/get-started/overview/}{docs.docker.com}
+            \item Website: \href{https://www.docker.com/}{docker.com}
+            \item \gls{Documentation}: \href{https://docs.docker.com/get-started/overview/}{docs.docker.com}
             \item Source code: \href{https://github.com/moby/moby}{github.com}
             \item Download: \href{https://docs.docker.com/get-docker/}{docs.docker.com}
         
         \end{itemize}
         
-        \item Docker Compose
+        \item \gls{Docker Compose}
         \begin{itemize}
         
             \item Version 2.0.1 or newer
-            \item Documentation: \href{https://docs.docker.com/compose/}{docs.docker.com}
+            \item \gls{Documentation}: \href{https://docs.docker.com/compose/}{docs.docker.com}
             \item Source code: \href{https://github.com/docker/compose}{github.com}
             \item Download: \href{https://docs.docker.com/compose/install/}{docs.docker.com}
         
         \end{itemize}
 
-        \item MariaDB Connector/Python
+        \item \gls{MariaDB} Connector/\gls{Python}
         \begin{itemize}
 
             \item Version 1.0.7 or newer
-            \item Documentation: \href{https://mariadb-corporation.github.io/mariadb-connector-python/}{mariadb-corporation.github.io}
+            \item \gls{Documentation}: \href{https://mariadb-corporation.github.io/mariadb-connector-python/}{mariadb-corporation.github.io}
             \item Source code: \href{https://github.com/mariadb-corporation/mariadb-connector-python}{github.com}
 
         \end{itemize}
 
-        \item Flask
+        \item \gls{Flask}
         \begin{itemize}
 
             \item Version 2.0.2 or newer
             \item Webpage: \href{https://flask.palletsprojects.com/en/2.0.x/}{flask.palletsprojects.com}
-            \item Documentation: \href{https://flask.palletsprojects.com/en/2.0.x/api/}{flask.palletsprojects.com}
+            \item \gls{Documentation}: \href{https://flask.palletsprojects.com/en/2.0.x/api/}{flask.palletsprojects.com}
             \item Source code: \href{https://github.com/pallets/flask}{github.com}
 
         \end{itemize}
@@ -485,7 +614,7 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
 
             \item Version 1.1.1 or newer
             \item Webpage: \href{https://timothycrosley.github.io/pdocs/}{timothycrosley.github.io}
-            \item Documentation: \href{https://timothycrosley.github.io/pdocs/reference/pdocs/api/}{timothycrosley.github.io}
+            \item \gls{Documentation}: \href{https://timothycrosley.github.io/pdocs/reference/pdocs/api/}{timothycrosley.github.io}
             \item Source code: \href{https://github.com/timothycrosley/pdocs}{github.com} 
 
         \end{itemize}
@@ -495,7 +624,7 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
         
             \item Version 6.0 or newer
             \item Webpage: \href{https://pyyaml.org/}{pyyaml.org}
-            \item Documentation: \href{https://pyyaml.org/wiki/PyYAMLDocumentation}{pyyaml.org}
+            \item \gls{Documentation}: \href{https://pyyaml.org/wiki/PyYAMLDocumentation}{pyyaml.org}
             \item Source code: \href{https://github.com/yaml/pyyaml}{github.com}
         
         \end{itemize}
@@ -505,17 +634,17 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
         
             \item Version 0.2.5 or newer
             \item Webpage: \href{https://pyyaml.org/wiki/LibYAML}{pyyaml.org}
-            \item Documentation: \href{https://libyaml.docsforge.com/}{libyaml.docsforge.com}
+            \item \gls{Documentation}: \href{https://libyaml.docsforge.com/}{libyaml.docsforge.com}
             \item Source code: \href{https://github.com/yaml/libyaml}{github.com}
         
         \end{itemize}
         
-        \item Bootstrap
+        \item \gls{Bootstrap}
         \begin{itemize}
 
             \item Version 5.1 or newer
             \item Webpage: \href{https://getbootstrap.com/}{getbootstrap.com}
-            \item Documentation: \href{https://getbootstrap.com/docs/5.1/getting-started/introduction/}{getbootstrap.com}
+            \item \gls{Documentation}: \href{https://getbootstrap.com/docs/5.1/getting-started/introduction/}{getbootstrap.com}
             \item Source code: \href{https://github.com/twbs/bootstrap}{github.com}
             \item Download: \href{https://getbootstrap.com/docs/5.1/getting-started/download/}{getbootstrap.com}
 
@@ -524,7 +653,7 @@ Although \gls{Recipe Buddy} is expected to work on modern browsers, the \gls{Rec
     \end{itemize}
 
 
-    \item \gls{Recipe Buddy} will interface with its database using a \gls{RESTful API}.
+    \item \gls{Recipe Buddy} will interface with its \gls{MariaDB} database using a \gls{RESTful API} and \gls{SQL} code.
     \begin{itemize}
 
         \item \gls{RESTful API} specifications: \href{https://restfulapi.net/}{restfulapi.net}
@@ -615,7 +744,8 @@ The recipe creation feature allows registered users to upload recipes to the \gl
         \hline
         Lead Developers & Matthew Sprague, Brian Williams, Joseph Morrison, Jeffrey Rescignano \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend    \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                                 \\
         \hline
         Risks           & None                                                                 \\
         \hline
@@ -628,7 +758,7 @@ The recipe creation feature allows registered users to upload recipes to the \gl
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Creation.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.1.1: Edit various elements of the recipe:
@@ -664,7 +794,8 @@ The recipe pages feature allows both guests and registered users to view recipe 
         \hline
         Lead Developers & Matthew Sprague, Brian Williams, Joseph Morrison, Jeffrey Rescignano \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend    \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                                 \\
         \hline
         Risks           & None                                                                 \\
         \hline
@@ -677,7 +808,7 @@ The recipe pages feature allows both guests and registered users to view recipe 
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Pages.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.2.1: View publicly available recipes and all relevant elements.
@@ -703,7 +834,8 @@ The timer feature allows registered users to access a timer on the recipe page t
         \hline
         Lead Developer & Joseph Morrison                                                   \\
         \hline
-        Testing        & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                             \\
         \hline
         Risks          & None                                                              \\
         \hline
@@ -716,7 +848,7 @@ The timer feature allows registered users to access a timer on the recipe page t
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Timer.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.3.1: For segments of the recipe that require timed steps.
@@ -739,7 +871,8 @@ The recipe difficulty feature allows recipe creators to set the difficulty of a 
         \hline
         Lead Developers & Matthew Sprague, Brian Williams                                   \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                                 \\
         \hline
         Risks           & None                                                              \\
         \hline
@@ -752,7 +885,7 @@ The recipe difficulty feature allows recipe creators to set the difficulty of a 
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Difficulty.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.4.1: Users have the ability to set the difficulty of the recipes that they create:
@@ -780,7 +913,8 @@ The recipe rating feature allows registered users to rate the quality of a recip
         \hline
         Lead Developer & Brian Williams                                                    \\
         \hline
-        Testing        & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                             \\
         \hline
         Risks          & None                                                              \\
         \hline
@@ -793,7 +927,7 @@ The recipe rating feature allows registered users to rate the quality of a recip
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Rating.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.5.1: Rate the quality of a recipe. Recipes are rated out of 5 stars, with 1 stars indicating the lowest quality and 5 stars indicating the highest quality.
@@ -816,7 +950,8 @@ The commenting feature allows registered users to leave a comment on a particula
         \hline
         Lead Developer & Matthew Sprague, Jeffrey Rescignano                               \\
         \hline
-        Testing        & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                             \\
         \hline
         Risks          & \gls{SQL injection}, \gls{XSS injection}                          \\
         \hline
@@ -829,7 +964,7 @@ The commenting feature allows registered users to leave a comment on a particula
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Commenting.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.6.1: Comment on public recipes under a 300 character limit.
@@ -856,7 +991,8 @@ The comment rating feature offers some moderation to comments left by other user
         \hline
         Lead Developer & Matthew Sprague                                                   \\
         \hline
-        Testing        & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                             \\
         \hline
         Risks          & None                                                              \\
         \hline
@@ -869,7 +1005,7 @@ The comment rating feature offers some moderation to comments left by other user
     \includegraphics[width=\columnwidth]{FlowCharts/Recipe-Comment-Rating.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-1.7.1: Upvote or downvote the public comments of users to indicate the quality of the comment.
@@ -892,7 +1028,8 @@ The profile feature allows guests and users to view the profile of a particular 
         \hline
         Lead Developers & Matthew Sprague, Brian Williams, Joseph Morrison, Jeffrey Rescignano \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend    \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                                 \\
         \hline
         Risks           & None                                                                 \\
         \hline
@@ -905,7 +1042,7 @@ The profile feature allows guests and users to view the profile of a particular 
     \includegraphics[width=\columnwidth]{FlowCharts/Profile-Profile.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-2.1.1: Edit user profile pictures, dietary information, pantry, tools.
@@ -931,7 +1068,8 @@ The pantry feature allows registered users to keep a detailed list of ingredient
         \hline
         Lead Developers & Matthew Sprague, Joseph Morrison                                  \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                              \\
         \hline
         Risks           & None                                                              \\
         \hline
@@ -944,7 +1082,7 @@ The pantry feature allows registered users to keep a detailed list of ingredient
     \includegraphics[width=\columnwidth]{FlowCharts/Profile-Pantry.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-2.2.1: Add and remove owned ingredients within their profile.
@@ -968,7 +1106,8 @@ The tools feature allows registered users to keep a detailed list of tools and a
         \hline
         Lead Developers & Matthew Sprague, Joseph Morrison                                  \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                              \\
         \hline
         Risks           & None                                                              \\
         \hline
@@ -981,7 +1120,7 @@ The tools feature allows registered users to keep a detailed list of tools and a
     \includegraphics[width=\columnwidth]{FlowCharts/Profile-Tools.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-2.3.1: Add and remove owned tools within their profile.
@@ -1005,7 +1144,8 @@ The search feature allows guests and registerd users to search for recipes using
         \hline
         Lead Developers & Matthew Sprague, Brian Williams, Joseph Morrison, Jeffrey Rescignano \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend    \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                                 \\
         \hline
         Risks           & \gls{SQL injection}, \gls{XSS injection}                             \\
         \hline
@@ -1018,7 +1158,7 @@ The search feature allows guests and registerd users to search for recipes using
     \includegraphics[width=\columnwidth]{FlowCharts/Search-Search.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-3.1.1: Insert keywords that get correlated with the ingredients, tools, and recipe names.
@@ -1042,7 +1182,8 @@ The flags feature allows the \gls{Recipe Buddy} system to notify users of certai
         \hline
         Lead Developers & Matthew Sprague, Joseph Morrison, Jeffrey Rescignano              \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                              \\
         \hline
         Risks           & \gls{SQL injection}, \gls{XSS injection}                          \\
         \hline
@@ -1055,7 +1196,7 @@ The flags feature allows the \gls{Recipe Buddy} system to notify users of certai
     \includegraphics[width=\columnwidth]{FlowCharts/Search-Flags.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-3.2.1: Prompt user if there are missing ingredients or tools for a recipe.
@@ -1080,7 +1221,8 @@ The account creation feature allows for guests to enter information in order to 
         \hline
         Lead Developers & Matthew Sprague, Jeffrey Rescignano                               \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                              \\
         \hline
         Risks           & \gls{SQL injection}, \gls{XSS injection}                          \\
         \hline
@@ -1093,7 +1235,7 @@ The account creation feature allows for guests to enter information in order to 
     \includegraphics[width=\columnwidth]{FlowCharts/Security-Account-Creation.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-4.1.1: Create an account by establishing a username, email, and password to access the site.
@@ -1117,7 +1259,8 @@ The login feature allows guests to login to their account and access their perso
         \hline
         Lead Developers & Matthew Sprague, Jeffrey Rescignano                               \\
         \hline
-        Testing         & Client and focus group frontend testing, unit testing for backend \\
+        Testing         & Client and focus group \gls{frontend} testing,
+                          \gls{unit testing} for \gls{backend}                              \\
         \hline
         Risks           & \gls{SQL injection}, \gls{XSS injection}, Account Theft           \\
         \hline
@@ -1130,13 +1273,13 @@ The login feature allows guests to login to their account and access their perso
     \includegraphics[width=\columnwidth]{FlowCharts/Security-Login.png}
 \end{figure}
 
-\subsection{Functional Requirements}
+\subsection{\gls{Functional Requirements}}
 
 \begin{itemize}
     \item REQ-4.2.1: Can access all features of the site with an established account.
 \end{itemize}
 
-\chapter{Other Nonfunctional Requirements}
+\chapter{Other \gls{Nonfunctional Requirements}}
 
 \section{Performance Requirements}
 \gls{Recipe Buddy} will be expected to run on all modern hardware, and will be optimized so that actions should not take more than a few seconds to be performed, with a couple exceptions. Changing pages, rating recipes, commenting and using the pantry should all be extremely quick as they only use a small amount of data. Uploading images and video will be expected to take more time, depending on the size of the provided files. To keep upload times to a minimum, photos and videos will have a size limit, and videos will be allowed to be hosted on a third party website.
