@@ -26,7 +26,12 @@ jobs:
         with:
           root_file: srs.tex
           post_compile: makeglossaries srs
-      - name: Compile with glossary 📖
+      - name: Compile with glossary, first run 📖
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: srs.tex
+          post_compile: makeglossaries srs
+      - name: Compile with glossary, second run 📖
         uses: xu-cheng/latex-action@v2
         with:
           root_file: srs.tex
